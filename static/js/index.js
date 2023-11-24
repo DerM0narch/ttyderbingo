@@ -93,4 +93,7 @@ function toggleVictoryPopup() {
     popup.style.alignContent = "center";
     popup.style.verticalAlign = "center";
     popup.style.paddingBottom = "5%";
+        setTimeout(() => {
+        fireworks.stop();
+    }, 10000);
 }
