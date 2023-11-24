@@ -1,15 +1,15 @@
 @font-face {
-  font-family: PopJoy;
+  font-family: HeyGorgeous;
   src: url("static/PopJoy.otf");
 }
 
 body {
   background-color: #eed08f;
-  font-family: PopJoy;
+  font-family: HeyGorgeous;
 }
 
 footer {
-  font-family: PopJoy;
+  font-family: HeyGorgeous;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -17,7 +17,7 @@ footer {
 }
 
 button {
-  font-family: PopJoy;
+  font-family: HeyGorgeous;
   color: #e7e3e7;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
@@ -45,4 +45,9 @@ button:hover {
   padding: 1rem;
   border: 1px solid black;
   border-radius: 1rem;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: bold;
 }

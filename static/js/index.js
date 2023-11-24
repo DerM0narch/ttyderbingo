@@ -85,7 +85,7 @@ function toggleVictoryPopup() {
     var popup = document.getElementById("popup");
     popup.innerHTML = `<div>
     <div class="popuptext" id="victoryPopup">
-      <h1>BINGO!</h1>
+      <h1>CONGRATULATIONS!</h1>
       <p>You got a bingo!</p>
       <a href="/"><button>New game</button></a>
     </div>
