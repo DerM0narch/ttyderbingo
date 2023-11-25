@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="static/css/index.css" />
-    <title>Changelog</title>
-  </head>
-  <body>
+{% extends 'base.html' %}
+{% block title %}Changelog{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="static/css/changelog.css" />
+{% endblock %}
+{% block body %}
     <div class="container">
-      <a href="/"><button>Back</button></a>
+      <a href="/"><button>Play Bingo</button></a>
+      <div class="card">
+        <span class="title">Version a0.4</span>
+        <ul>
+          <li>Added Seeds</li>
+        </ul>
+      </div>
       <div class="card">
         <span class="title">Version a0.3</span>
         <ul>
@@ -17,6 +21,7 @@
           <li>Moved the "Crystal Star" Achievment into 2 Groups</li>
           <li>Fireworks now stop after 10 seconds</li>
           <li>Fixed font-family for titles</li>
+          <li>Renamed some on hover descriptions</li>
         </ul>
       </div>
       <div class="card">
@@ -45,7 +50,4 @@
         </ul>
       </div>
     </div>
-    <link rel="stylesheet" href="static/css/changelog.css" />
-  </body>
-  <footer>2023 by DerMonarch. Inspired by FatGuy's TTYD Bingo.</footer>
-</html>
+{% endblock %}
