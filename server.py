@@ -49,7 +49,7 @@ def main():
     form = BingoForm()
     if form.validate_on_submit():
         seed = form.seed.data
-        return render_template('bingo.html', bingo_grid_list=list(get_bingo_challenges(seed).items()))
+        return render_template('bingo.html', bingo_grid_list=list(get_bingo_challenges(seed).items()), seed=seed, form=form)
     return render_template('index.html', seed=seed, form=form)
 
 

@@ -39,6 +39,7 @@ img {
   display: block;
   width: 100px;
   height: 100px;
+  cursor: pointer;
 }
 
 .title {
@@ -71,6 +72,11 @@ img {
   bottom: 0;
 }
 
+#popup {
+  text-align: center;
+  align-items: center;
+}
+
 .popuptext {
   text-align: center;
   align-items: center;
@@ -93,6 +99,38 @@ img {
 
 .popuptext button:hover {
   background-color: #ffbebd;
+}
+
+.inputs {
+  text-align: center;
+  align-items: center;
+  font-family: HeyGorgeous;
+  font-size: 18px;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inputs_cell {
+  display: table-cell;
+}
+
+input[type="submit"] {
+  font-family: HeyGorgeous;
+  color: #e7e3e7;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  font-size: 18px;
+  background-color: #ff8684;
+  border: 1px solid #ff8684;
+  border-radius: 15px;
+  padding: 5px 10px;
+  margin: 20px;
+}
+
+input[type="submit"]:hover {
+  background-color: #ffbebd;
+  cursor: pointer;
 }
 
 /* Add animation (fade in the popup) */
