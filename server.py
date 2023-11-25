@@ -4,10 +4,11 @@ from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
 import random
 import json
+import secrets
 import time
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'TheLiveforzzIsHotAsFuck'
+app.config['SECRET_KEY'] = secrets.token_urlsafe()
 
 # Form for Bingo Configuration
 class BingoForm(FlaskForm):
