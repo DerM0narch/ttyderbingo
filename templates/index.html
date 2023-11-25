@@ -1,35 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TTYD Bingo for Extreme Randomizer</title>
-    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.x/dist/index.umd.js"></script>
-  </head>
-  <body>
-    <div class="fireworks"></div>
-    <div class="container" id="container">
-      <div id="popup"><h1>TTYD BINGO</h1></div>
-      <!-- Bingo Grid -->
-      <table>
-        {% for row in range(5) %}
-        <tr>
-          {% for col in range(5) %} {% set item = bingo_grid_list[row * 5 + col]
-          %}
-          <td id="{{ row * 5 + col }}" title="{{ item[0] }}">
-            <img src="static/images/{{ item[1] }}.png" alt="{{ item[0] }}" />
-          </td>
-          {% endfor %}
-        </tr>
-        {% endfor %}
-      </table>
+{% extends 'base.html' %}
+{% block head %}
+ <link rel="stylesheet" href="static/css/index.css">
+{% endblock head %}
+
+{% block body %}
+    <h1>TTYD Bingo</h1>
+    <div class="container">
+        <form method="POST">
+            {{ form.hidden_tag() }}
+    
+            {{ form.seed.label }} <br>
+            {{ form.seed() }} <br>
+            <small>Leave empty for a random Card</small>
+            <br>
+            {{ form.submit() }}
+        </form>
     </div>
-    <link rel="stylesheet" href="static/css/index.css" />
-    <script src="https://cdn.jsdelivr.net/npm/@simondmc/popup-js@1.4.2/popup.min.js"></script>
-    <script src="static/js/index.js"></script>
-  </body>
-  <footer>
-    2023 by DerMonarch. Inspired by FatGuy's TTYD Bingo.
-    <a href="/changelog">Changelog</a>
-  </footer>
-</html>
+{% endblock %}

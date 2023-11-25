@@ -1,11 +1,23 @@
 from flask import Flask, render_template
+from flask_wtf import FlaskForm
+from wtforms import StringField, SubmitField
+from wtforms.validators import DataRequired
 import random
 import json
+import time
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'TheLiveforzzIsHotAsFuck'
 
-def get_bingo_challenges():
-    # from static/challenges.json get 25 random challenges without duplicates the 13th challenge is pulled from static/locations.json
+# Form for Bingo Configuration
+class BingoForm(FlaskForm):
+    seed = StringField("Seed")
+    submit = SubmitField("Play")
+
+
+def get_bingo_challenges(seed=""):
+    if seed != "":
+        random.seed(seed)
 
     # get all challenges
     with open('static/challenges.json') as f:
@@ -30,14 +42,25 @@ def get_bingo_challenges():
 
 
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def main():
-    # get the bingo challenges
-    bingo_grid = get_bingo_challenges()
-    bingo_grid_list = list(bingo_grid.items())
+    seed = None
+    form = BingoForm()
+    if form.validate_on_submit():
+        seed = form.seed.data
+        return render_template('bingo.html', bingo_grid_list=list(get_bingo_challenges(seed).items()))
+    return render_template('index.html', seed=seed, form=form)
 
-    # render the template
-    return render_template('index.html', bingo_grid_list=bingo_grid_list)
+
+# @app.route("/bingo")
+# def bingo():
+#         # get the bingo challenges
+#     bingo_grid = get_bingo_challenges()
+#     bingo_grid_list = list(bingo_grid.items())
+
+#     # render the template
+#     return render_template('bingo.html', bingo_grid_list=bingo_grid_list)
+
 
 @app.route('/changelog')
 def changelog():

@@ -1,0 +1,24 @@
+{% block head %}
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.x/dist/index.umd.js"></script>
+{% endblock %}
+{% block body %}
+    <div class="fireworks"></div>
+    <div class="container" id="container">
+      <div id="popup"><h1>TTYD BINGO</h1></div>
+      <!-- Bingo Grid -->
+      <table>
+        {% for row in range(5) %}
+        <tr>
+          {% for col in range(5) %} {% set item = bingo_grid_list[row * 5 + col]
+          %}
+          <td id="{{ row * 5 + col }}" title="{{ item[0] }}">
+            <img src="static/images/{{ item[1] }}.png" alt="{{ item[0] }}" />
+          </td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+    <link rel="stylesheet" href="static/css/bingo.css" />
+    <script src="static/js/bingo.js"></script>
+  {% endblock %}
