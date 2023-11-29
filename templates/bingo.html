@@ -5,22 +5,27 @@
 {% block body %}
     <div class="fireworks"></div>
     <div class="container" id="container">
-      <div id="popup">
-        <h1>TTYD BINGO</h1>
-        <br>
-        <div class="inputs">
-          <form action="/" method="POST" class="inputs_cell">
-            {{ form.hidden_tag() }}
-            <input id="seed1" type="hidden" name="seed" value="{{ seed }}">
-            <input id="submit1" type="submit" name="submit" value="Reload">
-          </form>
-          <form action="/" method="POST" class="inputs_cell">
-            {{ form.hidden_tag() }}
-            <input id="seed2" type="hidden" name="seed" value="">
-            <input id="submit2" type="submit" name="submit" value="Random">
-          </form>
-        </div>
+      <h1>TTYD BINGO</h1>
+      <div class="inputs">
+        <form action="/" method="POST" class="inputs_cell">
+          {{ form.hidden_tag() }}
+          <input id="seed1" type="hidden" name="seed" value="{{ seed }}">
+          <input id="submit1" type="submit" name="submit" value="Reload">
+        </form>
+        <form action="/" method="POST" class="inputs_cell">
+          {{ form.hidden_tag() }}
+          <input id="seed2" type="hidden" name="seed" value="">
+          <input id="submit2" type="submit" name="submit" value="Random">
+        </form>
       </div>
+      <dialog id="popup">
+        <div class="popuptext" id="victoryPopup">
+          <h1>CONGRATULATIONS!</h1>
+          <p>You got a bingo!</p>
+          <a href="/"><button>New game</button></a>
+          <button onclick="closeDialog()">Close</button>
+        </div>
+      </dialog>
       <!-- Bingo Grid -->
       <table>
         {% for row in range(5) %}
@@ -37,4 +42,4 @@
     </div>
     <link rel="stylesheet" href="static/css/bingo.css" />
     <script src="static/js/bingo.js"></script>
-  {% endblock %}
+{% endblock %}

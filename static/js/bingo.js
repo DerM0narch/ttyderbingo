@@ -3,6 +3,7 @@ const container = document.querySelector('.fireworks')
 const fireworks = new Fireworks.default(container)
 // Array to keep track of selected cells
 let selectedCells = [];
+let gotBingo = false;
 
 // Function to check for bingo
 function checkForBingo() {
@@ -51,8 +52,6 @@ function checkForBingo() {
         toggleVictoryPopup();
         return;
     }
-
-    fireworks.stop();
 }
 
 // Grey out the image if it is clicked and cross out the alt text
@@ -76,24 +75,28 @@ document.querySelectorAll('td').forEach(item => {
         }
 
         // Check for bingo after each click
+        if (gotBingo) {
+            return;
+        }
         checkForBingo();
     });
 });
 
 function toggleVictoryPopup() {
+    gotBingo = true;
     fireworks.start();
     var popup = document.getElementById("popup");
-    popup.innerHTML = `<div>
-    <div class="popuptext" id="victoryPopup">
-      <h1>CONGRATULATIONS!</h1>
-      <p>You got a bingo!</p>
-      <a href="/"><button>New game</button></a>
-    </div>
-  </div>`;
     popup.style.alignContent = "center";
     popup.style.verticalAlign = "center";
     popup.style.paddingBottom = "5%";
+    popup.showModal();
         setTimeout(() => {
         fireworks.stop();
     }, 10000);
+}
+
+function closeDialog() {
+    var popup = document.getElementById("popup");
+    popup.close();
+    fireworks.stop();
 }

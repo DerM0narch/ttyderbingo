@@ -133,6 +133,16 @@ input[type="submit"]:hover {
   cursor: pointer;
 }
 
+dialog {
+  font-family: HeyGorgeous;
+  font-size: 18px;
+  text-align: center;
+  align-items: center;
+  background-color: #a9904c;
+  border: 1px solid #a9904c;
+  border-radius: 15px;
+}
+
 /* Add animation (fade in the popup) */
 /* @-webkit-keyframes fadeIn {
   from {

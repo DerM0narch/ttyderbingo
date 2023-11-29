@@ -9,6 +9,7 @@
     "Hammerman": "hammerman",
     "Tornado Jump": "tornado_jump",
     "Slow Go": "slowgo",
+    "Return Postage": "return_postage",
     "10 Key Items": "ten_key_items",
     "Any Boots": "boots",
     "Any Hammer": "hammer",
@@ -34,5 +35,6 @@
     "Use Inn Coupon": "use_coupon",
     "Meet Shadow Queen": "shadow_queen",
     "Use the Fortune Teller": "fortune",
-    "Use Chet Rippo": "chet_rippo"
+    "Use Chet Rippo": "chet_rippo",
+    "Get contact lens": "contact_lens"
 }
