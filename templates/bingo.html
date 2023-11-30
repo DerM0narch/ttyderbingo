@@ -7,11 +7,13 @@
     <div class="container" id="container">
       <h1>TTYD BINGO</h1>
       <div class="inputs">
+        {% if seed != "" %}
         <form action="/" method="POST" class="inputs_cell">
           {{ form.hidden_tag() }}
           <input id="seed1" type="hidden" name="seed" value="{{ seed }}">
           <input id="submit1" type="submit" name="submit" value="Reload">
         </form>
+        {% endif %}
         <form action="/" method="POST" class="inputs_cell">
           {{ form.hidden_tag() }}
           <input id="seed2" type="hidden" name="seed" value="">

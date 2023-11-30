@@ -63,6 +63,11 @@ def main():
 #     return render_template('bingo.html', bingo_grid_list=bingo_grid_list)
 
 
+@app.route('/manual')
+def manual():
+    return render_template('manual.html')
+
+
 @app.route('/changelog')
 def changelog():
     return render_template('changelog.html')
