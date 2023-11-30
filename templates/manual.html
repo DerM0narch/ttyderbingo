@@ -1,0 +1,230 @@
+{% extends "base.html" %}
+{% block title %}Explanation{% endblock %}
+{% block body %}
+<div class="container">
+    <h2>Locations</h2>
+    <p>
+        Every enemy and boss encounter can also count for the location it is in. <br>
+        Being in a room or building (e.g., the shop) also counts as being in the location. <br>
+    </p>
+    <table>
+        <tr>
+            <th>Location</th>
+            <th>Explanation</th>
+        </tr>
+        <tr>
+            <td><img src="static/images/petalburg.png" alt="Petalburg"></td>
+            <td>Includes Petalburg, Petal Meadows and the 1000-year-old ruins.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/hooktail_castle.png" alt="Hooktail Castle"></td>
+            <td>Includes only Hooktail's Castle</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/boogly_woods.png" alt="Chapter 2"></td>
+            <td>Includes Boogly Woods, The Great Tree and Flurrie's House.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/glitzville.png" alt="Chapter 3"></td>
+            <td>Includes everything in Glitzville.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/twilight_town.png" alt="Chapter 4"></td>
+            <td>Includes Twilight Town, Twilight Trail and Creepy Steeple.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/keelhaul_key.png" alt="Chapter 5"></td>
+            <td>Includes everything on the tropical island (Keelhaul Key and Pirate's Grotto).</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/excess_express.png" alt="Excess Express"></td>
+            <td>Includes only being inside the Excess Express.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/riverside_station.png" alt="Riverside Station"></td>
+            <td>Includes only the Riverside Station.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/poshley_heights.png" alt="Poshley Heights"></td>
+            <td>Includes Poshley Heights and the Poshley Sanctum.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/fahr_outpost.png" alt="Fahr Outpost"></td>
+            <td>Includes Fahr Outpost and the areas around it.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/moon.png" alt="The Moon"></td>
+            <td>Includes the Moon and the X-Naut Fortress.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/shadow_palace.png" alt="Palace of Shadow"></td>
+            <td>Includes the palace and the riddle tower.</td>
+        </tr>
+    </table>
+
+    <h2>Other</h2>
+    <table>
+        <tr>
+            <th>Space</th>
+            <th>Explanation</th>
+        </tr>
+        <tr>
+            <td><img src="static/images/8plus_bp.png" alt="Use 8+ FP Move"></td>
+            <td>Use 8 FP or more with a single move by Mario or a partner.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/15plus_damage.png" alt="Deal 15+ Damage"></td>
+            <td>Deal 15 or more damage to an enemy with Mario or a partner.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/500_coins.png" alt="500 Coins"></td>
+            <td>Have 500 coins or more.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/999_coins.png" alt="999 Coins"></td>
+            <td>Have 999 coins.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/any_sfx.png" alt="Any SFX Badge"></td>
+            <td>Collect any of the SFX badges.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/boots.png" alt="Boots"></td>
+            <td>Acquire the Super or Ultra boots.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/hammer.png" alt="Hammer"></td>
+            <td>Acquire the Super or Ultra hammer.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/boss.png" alt="Any Boss"></td>
+            <td>Defeat any boss.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/mini_boss.png" alt="Any Mini Boss"></td>
+            <td>Defeat any mini boss.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/chet_rippo.png" alt="Use Chet Rippo"></td>
+            <td>Use Chet Rippo to change your stats.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/contact_lens.png" alt="Acquire Contact Lens"></td> 
+            <td>Buy the contact lens from the shop in Rougeport</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/credits_warp.png" alt="Credits Warp"></td>
+            <td>Get warped to the credits scene.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/double_pain.png" alt="Double Pain"></td>
+            <td>Acquire the Double Pain badge.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/email.png" alt="E-Mail"></td>
+            <td>Receive an email.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/first_half_stars.png" alt="First four Crystal Stars"></td>
+            <td>Collect any of the first three Crystal Stars (Diamond, Emerald, Gold) or the map.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/second_half_stars.png" alt="First four Crystal Stars"></td>
+            <td>Collect any of the last four Crystal Stars (Ruby, Sapphire, Garnet, Crystal).</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/floor_1st.png" alt="First half of the Pit"></td>
+            <td>Warp to any Floor from 1 to 50 of the pit.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/floor_2nd.png" alt="Second half of the Pit"></td>
+            <td>Warp to any Floor from 51 to 100 of the pit.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/fortune.png" alt="Use the Fortune Teller"></td>
+            <td>Use the fortune teller. Any Service counts.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/hammerman.png" alt="Hammerman"></td>
+            <td>Acquire the Hammerman Badge.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/level_10.png" alt="Reach Level 10"></td>
+            <td>Reach Level 10.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/no_messages_english.png" alt="No Messages English"></td>
+            <td>Get any of your partners to say "No Messages English".</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/one_hour.png" alt="1 Hour"></td>
+            <td>Reach 1 hour of Playtime.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/palm_tree.png" alt="Hit the Palm Tree"></td>
+            <td>Hit the Palm Tree in the background of Keelhaul Key.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/paper_skills.png" alt="Paper Skills"></td>
+            <td>Learn any of the Paper Abilities from the spirits inside the black chests.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/purple_mario.png" alt="Purple Mario"></td>
+            <td>Lose name and body to doopliss and become a purple shade.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/return_postage.png" alt="Return Postage"></td>
+            <td>Acquire the Return Postage Badge.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/shadow_queen.png" alt="Encounter Shadow Queen"></td>
+            <td>Encounter the Shadow Queen. Defeating her is not necessary.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/shine_sprite.png" alt="Shine Sprite"></td>
+            <td>Acquire a shine sprite.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/slowgo.png" alt="Slow Go"></td>
+            <td>Acquire a Slow Go badge.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/special_partner.png" alt="Special Partner"></td>
+            <td>Have a third partner by your side (e.g., Professor Frankly, Punio, etc.).</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/star_piece.png" alt="Star Piece"></td>
+            <td>Acquire a star piece.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/ten_key_items.png" alt="10 Key Items"></td>
+            <td>Have at least 10 key items.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/take_ten_damage.png" alt="Take 10+ Damage"></td>
+            <td>Receive at least 10 damage in one hit.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/tornado_jump.png" alt="Tornado Jump"></td>
+            <td>Acquire a Tornado Jump badge..</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/unsimplifier.png" alt="Unsimplifier"></td>
+            <td>Acquire an Unsimplifier badge.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/upgrade_partner.png" alt="Upgrade Partner"></td>
+            <td>Upgrade any of your partners.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/use_coupon.png" alt="Use Coupon"></td>
+            <td>Use the inn coupon.</td>
+        </tr>
+        <tr>
+            <td><img src="static/images/wl_emblem.png" alt="W and L Emblem"></td>
+            <td>Acquire the W or L emblem.</td>
+        </tr>
+    </table>
+</div>
+<link rel="stylesheet" href="static/css/manual.css">
+{% endblock %}

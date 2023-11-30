@@ -1,0 +1,54 @@
+@font-face {
+font-family: HeyGorgeous;
+src: url("/static/heygorgeous.ttf");
+}
+
+body {
+background-color: #eed08f;
+font-family: HeyGorgeous;
+font-size: small;
+
+}
+
+footer {
+font-family: HeyGorgeous;
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+font-size: x-small;
+}
+
+h2 {
+font-family: HeyGorgeous !important;
+text-align: center;
+font-family: sans-serif;
+}
+
+table {
+border-collapse: collapse;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+font-family: HeyGorgeous;
+padding-bottom: 5px;
+}
+th {
+ display: none;
+}
+td {
+border: 1px solid #a9904c;
+padding: 1px;
+}
+
+img {
+display: block;
+width: 100px;
+height: 100px;
+
+}
+p {
+font-family: HeyGorgeous;
+padding-bottom: 5px;    
+text-align: center;
+}
