@@ -37,5 +37,7 @@
     "Use the Fortune Teller": "fortune",
     "Use Chet Rippo": "chet_rippo",
     "Get contact lens": "contact_lens",
-    "Hit Palm Tree": "palm_tree"
+    "Hit Palm Tree": "palm_tree",
+    "Complete 10 Battle Conditions": "10_conditions",
+    "Complete 20 Battle Conditions": "20_conditions"
 }

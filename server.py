@@ -49,7 +49,9 @@ def main():
     form = BingoForm()
     if form.validate_on_submit():
         seed = form.seed.data
-        return render_template('bingo.html', bingo_grid_list=list(get_bingo_challenges(seed).items()), seed=seed, form=form)
+        with open('static/arena_challenges.json') as f:
+            arena_challenges = json.load(f)
+        return render_template('bingo.html', bingo_grid_list=list(get_bingo_challenges(seed).items()), seed=seed, form=form, battle_conditions=arena_challenges)
     return render_template('index.html', seed=seed, form=form)
 
 

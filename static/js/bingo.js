@@ -100,3 +100,5 @@ function closeDialog() {
     popup.close();
     fireworks.stop();
 }
+
+// pick a random condition for the arena from the array conditions
