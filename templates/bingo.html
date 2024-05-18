@@ -53,8 +53,27 @@
     </div>
    
     <link rel="stylesheet" href="static/css/bingo.css" />
-    <script src="static/js/bingo.js"></script>
     <script>
+
+      // Randomly select a battle condition
+      var conditions_completed = 0;
+      var conditions = {{ battle_conditions|tojson }};
+      const condition = document.getElementById("condition");
+      const completed_conditions = document.getElementById("completed_conditions");
+      
+      function newCondition() {
+        const randomIndex = Math.floor(Math.random() * conditions.length);
+        condition.innerHTML = conditions[randomIndex];
+      }
+
+      function newConditionAndCount() {
+        conditions_completed++;
+        completed_conditions.innerHTML = conditions_completed;
+        newCondition();
+      }
+
+      newCondition();
+
       const title = document.querySelector('h1');
       const container = document.querySelector('.fireworks')
       const fireworks = new Fireworks.default(container)
@@ -157,22 +176,6 @@
           fireworks.stop();
       }
 
-      // Randomly select a battle condition
-      var conditions_completed = 0;
-      var conditions = {{ battle_conditions|tojson }};
-      const condition = document.getElementById("condition");
-      const completed_conditions = document.getElementById("completed_conditions");
-      function newCondition() {
-        const randomIndex = Math.floor(Math.random() * conditions.length);
-        condition.innerHTML = conditions[randomIndex];
-      }
 
-      function newConditionAndCount() {
-        conditions_completed++;
-        completed_conditions.innerHTML = conditions_completed;
-        newCondition();
-      }
-
-      newCondition();
     </script>
 {% endblock %}
